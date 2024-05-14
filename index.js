@@ -116,14 +116,19 @@ function renderTable() {
 }
 
 function addPerson() {
-    if(newFreeLancers.length>0) {
-        const newPerson = newFreeLancers.pop()
+    // if(newFreeLancers.length>0) {
+    //     const newPerson = newFreeLancers.pop()
 
-        freelancers.push(newPerson);
-        renderTable()
-    }
-    else {
-        return;
+    //     freelancers.push(newPerson);
+    //     renderTable()
+    // }
+    // else {
+    //     return;
+    // }
+    if(freelancers.length < 10){
+    const newPerson = newFreeLancers[Math.floor(Math.random() * newFreeLancers.length)];
+    freelancers.push(newPerson);
+    renderTable();
     }
     // call average when add person function is used and store it
     let average = getAverage().toFixed(2);
