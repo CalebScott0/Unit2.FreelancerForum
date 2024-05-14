@@ -13,12 +13,6 @@ const newFreeLancers = [
 
 ];
 
-// Use replace children for average!
-// or use: 
-// const p = document.querySelector('p')
-// p.innerTExt=''
-// p.innerText= price;
-
 
 const div = document.createElement('div');
 div.id = 'root';
@@ -59,6 +53,7 @@ function init() {
 
         // converting from object to string to capitalize table headers
         const headerString = JSON.stringify(key);
+        // remove quotes from string using replace and global tag
         const newHeader = headerString.replace(/\"/g, "");  
         const header = document.createTextNode(newHeader.toUpperCase());
         
