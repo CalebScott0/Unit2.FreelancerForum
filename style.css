@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table {
+    margin: 0 30%;
+}
