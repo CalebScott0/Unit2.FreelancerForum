@@ -35,7 +35,7 @@ function init() {
     root.append(pageHeader);
 
     const avgPrice = document.createElement('p');
-    const average = getAverage();
+    const average = getAverage().toFixed(2);
     avgPrice.textContent = `The average starting price is: $${average}`;
     root.append(avgPrice);
 
