@@ -35,6 +35,7 @@ function init() {
     root.append(pageHeader);
 
     const avgPrice = document.createElement('p');
+    // calling getaverage function to 2 decimals and assigning it
     const average = getAverage().toFixed(2);
     avgPrice.textContent = `The average starting price is: $${average}`;
     root.append(avgPrice);
@@ -56,10 +57,12 @@ function init() {
 
         const th = document.createElement('th');
 
+        // converting from object to string to capitalize table headers
         const headerString = JSON.stringify(key);
         const newHeader = headerString.replace(/\"/g, "");  
         const header = document.createTextNode(newHeader.toUpperCase());
         
+        // add th and header to thead
         thead.appendChild(th).appendChild(header);
     }
     // add thead to table
@@ -129,6 +132,9 @@ function addPerson() {
     const newPerson = newFreeLancers[Math.floor(Math.random() * newFreeLancers.length)];
     freelancers.push(newPerson);
     renderTable();
+    }
+    else {
+        return;
     }
     // call average when add person function is used and store it
     let average = getAverage().toFixed(2);
