@@ -14,6 +14,7 @@ const newFreeLancers = [
 ];
 
 
+
 const div = document.createElement('div');
 div.id = 'root';
 const body = document.querySelector('body');
@@ -140,12 +141,12 @@ function addPerson() {
 }   
 
 function getAverage() {
-  let sum = 0;
-  for (const person of freelancers) {
-    sum += person['price'];
-  }
+  const sum = freelancers.reduce((acc, item) => {
+    acc = acc + item.price;
+    return acc;
+  }, 0);
 //   returns average price of current freelancers array
-    return sum/freelancers.length;
+  return sum/freelancers.length;
 }
 
 setInterval(addPerson, 2000);
