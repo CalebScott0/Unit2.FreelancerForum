@@ -115,15 +115,11 @@ function renderTable() {
 }
 
 function addPerson() {
-    // if(newFreeLancers.length>0) {
-    //     const newPerson = newFreeLancers.pop()
-
-    //     freelancers.push(newPerson);
-    //     renderTable()
-    // }
-    // else {
-    //     return;
-    // }
+        // const ran = Math.floor(Math.random() * newFreeLancers.length);
+        // const newPerson = newFreeLancers.slice(ran, ran+1);
+        // freelancers.push(newPerson);
+        // renderTable()
+   
     if(freelancers.length < 10){
     const newPerson = newFreeLancers[Math.floor(Math.random() * newFreeLancers.length)];
     freelancers.push(newPerson);
